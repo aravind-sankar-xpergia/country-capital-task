@@ -1,0 +1,28 @@
+:host {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 5px;
+    width: 200px;
+    flex-wrap: wrap;
+    margin: auto;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.main-btn {
+    padding: 5px;
+    width: auto;
+}
+
+.main-btn.selected {
+    background-color: #0000ff;
+}
+
+.main-btn.error {
+    background-color: red;
+}

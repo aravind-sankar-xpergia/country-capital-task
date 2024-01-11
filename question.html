@@ -1,0 +1,75 @@
+<div class="TaskDescription__TaskContentWrapper-sc-7m9k5q-2 kDUwpJ task-description-content"><p>Implement a game to match countries with their capitals in Angular.</p>
+<h3>Requirements</h3>
+<p>Implement an Angular component that renders a simple game.</p>
+<p>In the game, the player needs to match a country to its capital by clicking on appropriate buttons.</p>
+<ol>
+<li>
+<p>Your component should receive a <code>data</code> property in the following format (an object with the correct answer, where the keys are the names of the countries and the value of each key is the capital of the country):</p>
+<pre><code class="language-html">&lt;app-country-capital [data]="data" /&gt;
+</code></pre>
+<p>where <code>data</code> might look like this:</p>
+<pre><code class="language-js">{ Germany: "Berlin", Azerbaijan: "Baku" }
+</code></pre>
+</li>
+<li>
+<p>A button should be displayed for each country and each capital. So, the example above would return four buttons: <code>Germany</code>, <code>Berlin</code>, <code>Azerbaijan</code> and <code>Baku</code>.</p>
+</li>
+<li>
+<p>The buttons should be displayed in a random order.</p>
+</li>
+<li>
+<p>Clicking a button should set its background color to blue (<code>#0000ff</code>).</p>
+</li>
+<li>
+<p>Clicking another button should:</p>
+<ul>
+<li>remove both buttons if the correct country and capital pair has been selected;</li>
+<li>set the background color of both buttons to red (<code>#ff0000</code>) if a wrong pair has been selected.</li>
+</ul>
+</li>
+<li>
+<p>Assuming the previously selected pair was wrong, clicking another button should restore the default background color of the wrong pair and set the background color of the clicked button to blue (as in point 4).</p>
+</li>
+<li>
+<p>When there are no buttons left, display a message: <code>Congratulations</code>.</p>
+</li>
+</ol>
+<h3>Assumptions</h3>
+<ul>
+    <li>Initial solution. <br>
+        <code>
+        import { Component, Input } from '@angular/core'; <br>
+
+        &nbsp;&nbsp;type Data = { [key: string]: string;};<br>
+        <br>
+        &nbsp;&nbsp;@Component({   <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;selector: 'app-country-capital',   <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;templateUrl: `YOUR-TEMPLATE-URL`,  <br>
+            })   <br>
+            &nbsp;&nbsp;// Do not change the way the component is named and exported.   <br>
+        export class CountryCapitalComponent {   <br>
+            &nbsp;&nbsp;@Input() data;   <br>
+            &nbsp;&nbsp;//Use console.log() for debugging   <br>
+        }
+    </code></li>
+<li>Do not change the way the component is named and exported.</li>
+<li>Assume the provided data is correct (all the <code>data</code> object keys and values are strings).</li>
+<li>The look of the component won't be evaluated; only its specified functionalities will be tested.</li>
+<li>The solution folder should contains ts and html files as well as css file (if you have used any).</li>
+</ul>
+<h3>Available tools/packages</h3>
+<p>Use the browser console for debugging.</p>
+<p>You are expected to use <code>Angular: 14.1.2</code>. The only available import is at the top of your initial solution:</p>
+<ul>
+<li>@angular/core (v14.1.2)</li>
+</ul>
+<h3>Examples</h3>
+<h5>Example in working app</h5>
+<p>Correct answers in the example are:</p>
+<ul>
+<li>Poland — Warsaw</li>
+<li>Germany — Berlin</li>
+<li>Azerbaijan — Baku</li>
+<li>Papua New Guinea — Port Moresby</li>
+</ul>
+<p><img src="angular-example.gif" alt="example"></p></div>

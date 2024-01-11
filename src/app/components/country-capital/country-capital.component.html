@@ -1,0 +1,11 @@
+<div class="container">
+    <button 
+        *ngFor="let button of buttonList; trackBy: buttonTrackBy"
+        class="main-btn" 
+        [ngClass]="getButtonClass(button)" 
+        (click)="handleButtonSelect(button)">
+            {{button}}
+    </button>
+    
+    <div class="result" *ngIf="data && buttonList.length === 0">Congratulations!</div>
+</div>
